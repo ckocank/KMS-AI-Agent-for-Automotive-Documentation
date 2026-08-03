@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "automotive-office-kms"
+version = "0.1.0"
+description = "Grounded KMS agent for automotive PowerPoint and Excel documentation"
+requires-python = ">=3.11"
+dependencies = [
+  "openpyxl>=3.1,<4",
+  "python-pptx>=1.0,<2",
+]
+
+[project.scripts]
+office-kms = "kms_agent.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
